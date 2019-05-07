@@ -1,0 +1,19 @@
+<app-standart-row-form
+  (saveEvent)="addProduct($event)"
+  (productForEditingEmitter)="editProduct($event)"
+  (swapFormToBtnEmitter)="swapFormToBtn($event)"
+  [formStatus]="formStatus"
+  [productForEditing]="productForEditing"
+  [edit]="edit"
+>
+</app-standart-row-form>
+<button *ngIf="btnStatus" class="new-product" (click)="newProductbtn()">
+  New Product
+</button>
+<table></table>
+<app-products-table
+  (productEditEmitter)="editEvent($event)"
+  (productDeleteEmitter)="deleteProduct($event)"
+  [data]="products"
+>
+</app-products-table>

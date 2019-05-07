@@ -1,0 +1,13 @@
+@import "../core/var";
+:host {
+  display: block;
+  padding: 20px;
+}
+.logout {
+  @include remove-margin-padding;
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  line-height: 30px;
+  margin-bottom: 10px;
+  width: 100px;
+}

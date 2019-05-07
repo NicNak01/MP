@@ -1,0 +1,44 @@
+<form
+  *ngIf="form"
+  class="form"
+  autocomplete="off"
+  [formGroup]="rowForm"
+  (ngSubmit)="save(rowForm.value)"
+>
+  <input
+    class="input-field"
+    type="number"
+    placeholder="ID"
+    formControlName="id"
+    [ngClass]="{
+      'is-invalid':
+        (rowForm.get('id').touched || rowForm.get('id').dirty) &&
+        !rowForm.get('id').valid
+    }"
+  />
+  <input
+    class="input-field"
+    type="text"
+    placeholder="NAME"
+    formControlName="name"
+    [ngClass]="{
+      'is-invalid':
+        (rowForm.get('name').touched || rowForm.get('name').dirty) &&
+        !rowForm.get('name').valid
+    }"
+  />
+  <input
+    class="input-field"
+    type="number"
+    placeholder="PRICE"
+    formControlName="price"
+    [ngClass]="{
+      'is-invalid':
+        (rowForm.get('price').touched || rowForm.get('price').dirty) &&
+        !rowForm.get('price').valid
+    }"
+  />
+  <button class="save-btn" type="submit" [disabled]="!rowForm.valid">
+    Save
+  </button>
+</form>

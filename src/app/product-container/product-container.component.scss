@@ -1,0 +1,16 @@
+@import "../core/var";
+
+.new-product {
+  float: left;
+  @include remove-margin-padding;
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  line-height: 30px;
+  margin-bottom: 10px;
+  width: 100px;
+}
+@media screen and (min-width: 583px) {
+  .new-product {
+    float: right;
+  }
+}

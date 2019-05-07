@@ -1,0 +1,43 @@
+@import "../core/var";
+
+table {
+  border: 1px solid $main-color;
+  border-collapse: collapse;
+  @include remove-margin-padding;
+  width: 500px;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: 0.5em 0 0.75em;
+}
+
+tr {
+  background-color: #f8f8f8;
+  border: 1px solid $border-color;
+  padding: 0.35em;
+}
+
+table th,
+table td {
+  padding: 0.625em;
+  text-align: center;
+}
+
+table th {
+  font-size: 0.85em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+button {
+  border: 1px solid $main-color;
+  line-height: 20px;
+  margin: 5px;
+  width: 80px;
+}
+@media screen and (min-width: 492px) {
+  table {
+    width: 100%;
+  }
+}

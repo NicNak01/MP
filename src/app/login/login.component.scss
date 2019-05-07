@@ -1,0 +1,51 @@
+@import "../core/var";
+
+:host {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 20px;
+  width: 100%;
+}
+
+.input-field {
+  text-align: center;
+  line-height: 30px;
+  margin-bottom: 15px;
+  font-size: 1em;
+  width: 100%;
+  border: 1px solid $main-color;
+  padding: 0;
+}
+
+.login-btn {
+  line-height: 30px;
+  background: $main-color;
+  width: 100%;
+  font-size: 1em;
+  min-width: 300px;
+  @include remove-margin-padding;
+  border: 0;
+}
+
+.is-invalid {
+  @include is-invalid;
+}
+
+@media screen and (min-width: 600px) {
+  .login-btn {
+    width: 600px;
+  }
+  .input-field {
+    width: 600px;
+  }
+}

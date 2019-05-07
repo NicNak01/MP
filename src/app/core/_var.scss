@@ -1,0 +1,13 @@
+$main-color: #ccc;
+$border-color: #ddd;
+
+@mixin is-invalid {
+  -webkit-box-shadow: 0px 0px 3px 1px rgba(230, 34, 34, 1);
+  -moz-box-shadow: 0px 0px 3px 1px rgba(230, 34, 34, 1);
+  box-shadow: 0px 0px 3px 1px rgba(230, 34, 34, 1);
+}
+
+@mixin remove-margin-padding {
+  margin: 0;
+  padding: 0;
+}

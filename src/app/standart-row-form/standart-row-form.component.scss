@@ -1,0 +1,55 @@
+@import "../core/var";
+:host {
+  display: block;
+  margin-bottom: 5px;
+}
+.form {
+  text-align: center;
+}
+.input-field {
+  padding: 0;
+  border: 1px solid $main-color;
+  border-collapse: collapse;
+  text-align: center;
+  min-width: 256px;
+  width: 500px;
+  line-height: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.save-btn {
+  padding: 0;
+  border: 1px solid $main-color;
+  border-collapse: collapse;
+  line-height: 30px;
+  min-width: 256px;
+  width: 500px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.is-invalid {
+  @include is-invalid;
+}
+
+@media screen and (min-width: 500px) {
+  .input-field {
+    width: 80%;
+  }
+  .save-btn {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1769px) {
+  .save-btn {
+    float: right;
+    width: 100px;
+    min-width: 100px;
+  }
+  .input-field {
+    width: 31%;
+    margin-right: 5px;
+  }
+  .form {
+    text-align: left;
+  }
+}

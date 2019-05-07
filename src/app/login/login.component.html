@@ -1,0 +1,31 @@
+<form
+  class="form"
+  autocomplete="off"
+  [formGroup]="loginForm"
+  (ngSubmit)="login(loginForm.value)"
+>
+  <input
+    class="input-field"
+    type="email"
+    placeholder="name@example.com"
+    formControlName="email"
+    [ngClass]="{
+      'is-invalid':
+        (loginForm.get('email').touched || loginForm.get('email').dirty) &&
+        !loginForm.get('email').valid
+    }"
+  />
+  <input
+    class="input-field"
+    type="password"
+    placeholder="Password..."
+    formControlName="password"
+    [ngClass]="{
+      'is-invalid':
+        (loginForm.get('password').touched ||
+          loginForm.get('password').dirty) &&
+        !loginForm.get('password').valid
+    }"
+  />
+  <button [disabled]="!loginForm.valid" class="login-btn">Login</button>
+</form>
